@@ -1,4 +1,4 @@
-import { openai } from "@ai-sdk/openai";
+import { createOpenAI } from "@ai-sdk/openai";
 import { Ratelimit } from "@upstash/ratelimit";
 import { kv } from "@vercel/kv";
 import { streamText } from "ai";
@@ -122,7 +122,11 @@ export async function POST(req: Request): Promise<Response> {
     topP: 1,
     frequencyPenalty: 0,
     presencePenalty: 0,
-    model: openai("gpt-4o-mini"),
+    model: createOpenAI({
+      compatibility: "compatible",
+      apiKey: process.env.OPENAI_API_KEY,
+      baseURL: process.env.OPENAI_BASE_URL || "https://api.openai.com/v1",
+    })((process.env.OPENAI_MODEL) || "gpt-4"),
   });
 
   return result.toDataStreamResponse();
