@@ -1,14 +1,11 @@
-import "@/styles/globals.css";
-import "@/styles/prosemirror.css";
-import 'katex/dist/katex.min.css';
-
+import "./globals.css";
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import Providers from "./providers";
 
-const title = "Novel - Notion-style WYSIWYG editor with AI-powered autocompletions";
+const title = "DeepSeek R1 - Advanced AI Solutions";
 const description =
-  "Novel is a Notion-style WYSIWYG editor with AI-powered autocompletions. Built with Tiptap, OpenAI, and Vercel AI SDK.";
+  "Explore infinite AI possibilities with DeepSeek R1, delivering powerful AI solutions for natural language processing, code generation, and complex problem solving.";
 
 export const metadata: Metadata = {
   title,
@@ -20,14 +17,7 @@ export const metadata: Metadata = {
   twitter: {
     title,
     description,
-    card: "summary_large_image",
-    creator: "@steventey",
   },
-  metadataBase: new URL("https://novel.sh"),
-};
-
-export const viewport: Viewport = {
-  themeColor: "#ffffff",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

@@ -1,21 +1,21 @@
 import { Button } from "@/components/tailwind/ui/button";
-import { GithubIcon, Feather, Sparkles, Zap, FileText } from "lucide-react";
+import { Brain, Bolt, Lock, Code, MessageSquare, Image } from "lucide-react";
 import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'NovelCop - AI-Powered Writing Assistant | Write Better Content',
-  description: 'NovelCop is an AI-powered writing assistant that helps you create better content faster. Get intelligent suggestions, real-time collaboration, and beautiful formatting.',
-  keywords: 'AI writing assistant, content creation, writing tool, text editor, collaboration tool',
+  title: 'DeepSeek R1 - Advanced AI Solutions',
+  description: 'Explore infinite AI possibilities with DeepSeek R1, delivering powerful AI solutions for natural language processing, code generation, and complex problem solving.',
+  keywords: 'DeepSeek R1, AI solutions, natural language processing, code generation, AI model',
   openGraph: {
-    title: 'NovelCop - AI-Powered Writing Assistant',
-    description: 'Create better content faster with AI-powered writing assistance',
+    title: 'DeepSeek R1 - Advanced AI Solutions',
+    description: 'Explore infinite AI possibilities with DeepSeek R1',
     images: ['/og-image.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NovelCop - AI-Powered Writing Assistant',
-    description: 'Create better content faster with AI-powered writing assistance',
+    title: 'DeepSeek R1 - Advanced AI Solutions',
+    description: 'Explore infinite AI possibilities with DeepSeek R1',
     images: ['/twitter-image.jpg'],
   },
 };
@@ -23,56 +23,67 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
+      <div className="fluid-background fixed top-0 left-0 w-full h-full -z-10">
+        <div className="fluid-shape"></div>
+        <div className="fluid-shape"></div>
+        <div className="fluid-shape"></div>
+        <div className="fluid-shape"></div>
+        <div className="fluid-shape"></div>
+      </div>
+
       <header className="fixed top-0 w-full bg-white/80 backdrop-blur-sm border-b z-50">
         <nav className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
-            <Feather className="h-6 w-6 text-blue-600" />
-            <span className="text-xl font-bold text-gray-900">NovelCop</span>
+            <span className="text-xl font-bold text-gray-900">OpenSeek</span>
           </Link>
           <div className="flex items-center gap-6">
-            <Link href="/features" className="text-gray-600 hover:text-gray-900">Features</Link>
-            <Link href="/pricing" className="text-gray-600 hover:text-gray-900">Pricing</Link>
-            <Link href="/docs" className="text-gray-600 hover:text-gray-900">Docs</Link>
-            <Link href="/editor">
-              <Button>Try Editor</Button>
-            </Link>
+            <Link href="#features" className="text-gray-600 hover:text-gray-900">Features</Link>
+            <Link href="#models" className="text-gray-600 hover:text-gray-900">Models</Link>
+            <Link href="#about" className="text-gray-600 hover:text-gray-900">About</Link>
+            <Link href="#contact" className="text-gray-600 hover:text-gray-900">Contact</Link>
           </div>
         </nav>
       </header>
 
       <main className="pt-16">
+        {/* AI Chat Demo Section */}
+        <section className="py-12 relative overflow-hidden">
+          <div className="max-w-4xl mx-auto px-4">
+            <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg">
+              <div className="chat-container space-y-6">
+                <div className="chat-item">
+                  <div className="bg-gray-100 rounded-lg p-4 mb-4">
+                    <p className="typing-text">What can DeepSeek R1 do?</p>
+                  </div>
+                  <div className="bg-blue-50 rounded-lg p-4">
+                    <p className="mb-3">DeepSeek R1 is a state-of-the-art AI model that excels in:</p>
+                    <ul className="space-y-2 ml-4">
+                      <li>• Natural Language Processing</li>
+                      <li>• Code Generation & Analysis</li>
+                      <li>• Complex Problem Solving</li>
+                      <li>• Multi-modal Understanding</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Hero Section */}
-        <section className="py-24 bg-gradient-to-b from-blue-50 to-white overflow-hidden">
+        <section className="py-24">
           <div className="max-w-6xl mx-auto px-4">
             <div className="text-center">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 tracking-tight">
-                Write Better Content
-                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> with AI</span>
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
+                Explore Infinite
+                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> AI Possibilities</span>
               </h1>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">
-                Transform your writing with AI-powered suggestions, real-time collaboration, 
-                and beautiful formatting. Create content that stands out.
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-10">
+                Powered by the latest DeepSeek R1 architecture, delivering powerful AI solutions
               </p>
-              <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
-                <Link href="/editor">
-                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 h-14 text-lg">
-                    <Sparkles className="mr-2 h-5 w-5" />
-                    Start Writing Free
-                  </Button>
-                </Link>
-                <a href="https://github.com/steven-tey/novel" 
-                   target="_blank" 
-                   rel="noreferrer"
-                   className="inline-flex items-center">
-                  <Button size="lg" variant="outline" className="h-14 text-lg">
-                    <GithubIcon className="mr-2 h-5 w-5" />
-                    Star on GitHub
-                  </Button>
-                </a>
-              </div>
-              <div className="text-sm text-gray-500">
-                No credit card required · Free plan available
-              </div>
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 h-14 text-lg">
+                Get Started
+              </Button>
             </div>
           </div>
         </section>
@@ -80,116 +91,151 @@ export default function HomePage() {
         {/* Features Section */}
         <section className="py-24 bg-white" id="features">
           <div className="max-w-6xl mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-                Everything You Need to Write Better
-              </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Powerful features to help you create outstanding content
-              </p>
-            </div>
-            <div className="grid md:grid-cols-3 gap-8">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-16 text-center">Core Features</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <article className="p-8 rounded-xl bg-gradient-to-b from-blue-50 to-white border border-blue-100">
                 <div className="w-12 h-12 rounded-lg bg-blue-600 flex items-center justify-center mb-6">
-                  <Sparkles className="h-6 w-6 text-white" />
+                  <Brain className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-gray-900">AI Writing Assistant</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Get intelligent suggestions and auto-completions powered by advanced AI models.
-                  Write faster and better than ever before.
+                <h3 className="text-xl font-semibold mb-3">Deep Learning</h3>
+                <p className="text-gray-600">
+                  Advanced deep learning technology for superior AI performance
                 </p>
               </article>
               <article className="p-8 rounded-xl bg-gradient-to-b from-purple-50 to-white border border-purple-100">
                 <div className="w-12 h-12 rounded-lg bg-purple-600 flex items-center justify-center mb-6">
-                  <Zap className="h-6 w-6 text-white" />
+                  <Bolt className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-gray-900">Real-time Collaboration</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Work together with your team in real-time. See changes as they happen
-                  and never lose track of your work.
+                <h3 className="text-xl font-semibold mb-3">Fast Inference</h3>
+                <p className="text-gray-600">
+                  Optimized inference engine for rapid response
+                </p>
+              </article>
+              <article className="p-8 rounded-xl bg-gradient-to-b from-green-50 to-white border border-green-100">
+                <div className="w-12 h-12 rounded-lg bg-green-600 flex items-center justify-center mb-6">
+                  <Lock className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Secure & Reliable</h3>
+                <p className="text-gray-600">
+                  Enterprise-grade security to protect your data privacy
                 </p>
               </article>
               <article className="p-8 rounded-xl bg-gradient-to-b from-pink-50 to-white border border-pink-100">
                 <div className="w-12 h-12 rounded-lg bg-pink-600 flex items-center justify-center mb-6">
-                  <FileText className="h-6 w-6 text-white" />
+                  <Code className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-gray-900">Beautiful Formatting</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Create professionally formatted documents with our intuitive editor.
-                  Export to multiple formats.
+                <h3 className="text-xl font-semibold mb-3">Open Integration</h3>
+                <p className="text-gray-600">
+                  Simple APIs supporting multiple development frameworks
                 </p>
               </article>
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-24 bg-gradient-to-b from-white to-blue-50">
+        {/* Models Section */}
+        <section className="py-24 bg-gradient-to-b from-white to-blue-50" id="models">
+          <div className="max-w-6xl mx-auto px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-16 text-center">Model Capabilities</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <article className="bg-white p-8 rounded-xl shadow-lg">
+                <div className="w-12 h-12 rounded-lg bg-blue-600 flex items-center justify-center mb-6">
+                  <MessageSquare className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4">Natural Language Processing</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-center text-gray-600">
+                    <span className="mr-2">•</span>
+                    Text Generation & Understanding
+                  </li>
+                  <li className="flex items-center text-gray-600">
+                    <span className="mr-2">•</span>
+                    Multilingual Translation
+                  </li>
+                  <li className="flex items-center text-gray-600">
+                    <span className="mr-2">•</span>
+                    Sentiment Analysis
+                  </li>
+                </ul>
+              </article>
+              <article className="bg-white p-8 rounded-xl shadow-lg">
+                <div className="w-12 h-12 rounded-lg bg-purple-600 flex items-center justify-center mb-6">
+                  <Image className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4">Computer Vision</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-center text-gray-600">
+                    <span className="mr-2">•</span>
+                    Image Recognition & Classification
+                  </li>
+                  <li className="flex items-center text-gray-600">
+                    <span className="mr-2">•</span>
+                    Object Detection
+                  </li>
+                  <li className="flex items-center text-gray-600">
+                    <span className="mr-2">•</span>
+                    Image Generation
+                  </li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        {/* About Section */}
+        <section className="py-24 bg-white" id="about">
           <div className="max-w-6xl mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Ready to Transform Your Writing?
-            </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Join thousands of writers who are already creating better content with NovelCop.
-              Start your free trial today.
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">About Us</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              We are dedicated to building next-generation AI technology, making artificial intelligence smarter, 
+              more reliable, and easier to use.
             </p>
-            <Link href="/editor">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 h-14 text-lg">
-                Get Started Free
-              </Button>
-            </Link>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section className="py-24 bg-gradient-to-b from-white to-blue-50" id="contact">
+          <div className="max-w-6xl mx-auto px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-16 text-center">Contact Us</h2>
+            <div className="max-w-xl mx-auto">
+              <div className="space-y-4">
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                <textarea
+                  placeholder="Your Message"
+                  rows={4}
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                  Send Message
+                </Button>
+              </div>
+            </div>
           </div>
         </section>
       </main>
 
       <footer className="bg-white border-t py-12">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-8">
             <div>
-              <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity mb-4">
-                <Feather className="h-5 w-5 text-blue-600" />
-                <span className="text-lg font-semibold text-gray-900">NovelCop</span>
-              </Link>
+              <div className="flex items-center space-x-2 mb-4">
+                <span className="text-lg font-semibold text-gray-900">OpenSeek</span>
+              </div>
               <p className="text-sm text-gray-500">
-                AI-powered writing assistant for better content creation
+                Explore Infinite AI Possibilities
               </p>
             </div>
-            <div>
-              <h4 className="font-semibold text-gray-900 mb-3">Product</h4>
-              <ul className="space-y-2">
-                <li><Link href="/features" className="text-gray-600 hover:text-gray-900">Features</Link></li>
-                <li><Link href="/pricing" className="text-gray-600 hover:text-gray-900">Pricing</Link></li>
-                <li><Link href="/docs" className="text-gray-600 hover:text-gray-900">Documentation</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold text-gray-900 mb-3">Company</h4>
-              <ul className="space-y-2">
-                <li><Link href="/about" className="text-gray-600 hover:text-gray-900">About</Link></li>
-                <li><Link href="/blog" className="text-gray-600 hover:text-gray-900">Blog</Link></li>
-                <li><Link href="/careers" className="text-gray-600 hover:text-gray-900">Careers</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold text-gray-900 mb-3">Legal</h4>
-              <ul className="space-y-2">
-                <li><Link href="/privacy" className="text-gray-600 hover:text-gray-900">Privacy</Link></li>
-                <li><Link href="/terms" className="text-gray-600 hover:text-gray-900">Terms</Link></li>
-                <li>
-                  <a 
-                    href="https://github.com/steven-tey/novel" 
-                    target="_blank" 
-                    rel="noreferrer"
-                    className="text-gray-600 hover:text-gray-900"
-                  >
-                    GitHub
-                  </a>
-                </li>
-              </ul>
+            <div className="text-right">
+              <h4 className="font-semibold text-gray-900 mb-3">Contact</h4>
+              <p className="text-sm text-gray-500">Email: contact@open-seek.com</p>
             </div>
           </div>
           <div className="mt-8 pt-8 border-t text-center text-sm text-gray-500">
-            {new Date().getFullYear()} NovelCop. All rights reserved.
+            {new Date().getFullYear()} OpenSeek. All rights reserved.
           </div>
         </div>
       </footer>
