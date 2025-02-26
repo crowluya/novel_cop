@@ -4,30 +4,22 @@ import { useState, useEffect } from 'react';
 import { MessageSquare, X, Minimize2, Maximize2 } from 'lucide-react';
 
 export default function FloatingChatDemo() {
-  // State to track mouse position
-  const [mousePosition, setMousePosition] = useState({ y: 0 });
+  // 移除鼠标位置跟踪
   const [windowHeight, setWindowHeight] = useState(0);
   const [isMinimized, setIsMinimized] = useState(false);
   
-  // Effect to update mouse position and window height
+  // 只保留窗口大小调整的监听
   useEffect(() => {
     // Set initial window height
     setWindowHeight(window.innerHeight);
-    
-    const handleMouseMove = (e: MouseEvent) => {
-      // Only track vertical movement to avoid too much movement
-      setMousePosition({ y: e.clientY });
-    };
     
     const handleResize = () => {
       setWindowHeight(window.innerHeight);
     };
     
-    window.addEventListener('mousemove', handleMouseMove);
     window.addEventListener('resize', handleResize);
     
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('resize', handleResize);
     };
   }, []);
@@ -40,7 +32,7 @@ export default function FloatingChatDemo() {
     <div 
       className={`fixed right-4 z-40 transition-all duration-300 ease-out ${isMinimized ? 'w-12' : 'w-80'}`}
       style={{ 
-        top: `${Math.max(80, Math.min(windowHeight - 300, mousePosition.y - 150))}px`,
+        top: '80px', // 固定在顶部下方80px的位置
         opacity: isMinimized ? 1 : 0.85,
       }}
     >

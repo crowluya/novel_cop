@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function EditorEmbedPage() {
   return (
-    <div className="w-full h-full min-h-[500px] bg-background">
+    <div className="w-full h-full min-h-[500px] bg-background flex items-center justify-center">
       <TailwindAdvancedEditor />
     </div>
   );

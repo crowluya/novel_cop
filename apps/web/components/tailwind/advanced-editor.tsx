@@ -22,6 +22,7 @@ import { LinkSelector } from "./selectors/link-selector";
 import { MathSelector } from "./selectors/math-selector";
 import { NodeSelector } from "./selectors/node-selector";
 import { Separator } from "./ui/separator";
+import { Button } from "./ui/button";
 
 import GenerativeMenuSwitch from "./generative/generative-menu-switch";
 import { uploadFn } from "./image-upload";
@@ -36,6 +37,7 @@ const TailwindAdvancedEditor = () => {
   const [initialContent, setInitialContent] = useState<null | JSONContent>(null);
   const [saveStatus, setSaveStatus] = useState("Saved");
   const [charsCount, setCharsCount] = useState();
+  const [editorInstance, setEditorInstance] = useState<EditorInstance | null>(null);
 
   const [openNode, setOpenNode] = useState(false);
   const [openColor, setOpenColor] = useState(false);
@@ -95,6 +97,7 @@ const TailwindAdvancedEditor = () => {
             },
           }}
           onUpdate={({ editor }) => {
+            setEditorInstance(editor);
             debouncedUpdates(editor);
             setSaveStatus("Unsaved");
           }}

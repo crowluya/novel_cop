@@ -4,7 +4,7 @@ export const defaultEditorContent = {
     {
       type: "heading",
       attrs: { level: 2 },
-      content: [{ type: "text", text: "Introducing Novel" }],
+      content: [{ type: "text", text: "Introducing DeepSeek Editor" }],
     },
     {
       type: "paragraph",
@@ -20,7 +20,7 @@ export const defaultEditorContent = {
               },
             },
           ],
-          text: "Novel",
+          text: "DeepSeek Editor",
         },
         {
           type: "text",
