@@ -1,9 +1,10 @@
 "use client";
 
-import { Check, Menu as MenuIcon, Monitor, Moon, SunDim } from "lucide-react";
+import { Check, Menu as MenuIcon, Monitor, Moon, SunDim, MessageSquare } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "./button";
 import { Popover, PopoverContent, PopoverTrigger } from "./popover";
+import { useRouter } from "next/navigation";
 
 // TODO implement multiple fonts editor
 // const fonts = [
@@ -37,6 +38,11 @@ const appearances = [
 export default function Menu() {
   // const { font: currentFont, setFont } = useContext(AppContext);
   const { theme: currentTheme, setTheme } = useTheme();
+  const router = useRouter();
+
+  const handleContactClick = () => {
+    router.push('/#contact');
+  };
 
   return (
     <Popover>
@@ -83,6 +89,19 @@ export default function Menu() {
             {currentTheme === theme.toLowerCase() && <Check className="h-4 w-4" />}
           </Button>
         ))}
+        <div className="border-t my-2" />
+        <Button
+          variant="ghost"
+          className="flex w-full items-center justify-between rounded px-2 py-1.5 text-sm"
+          onClick={handleContactClick}
+        >
+          <div className="flex items-center space-x-2">
+            <div className="rounded-sm border p-1">
+              <MessageSquare className="h-4 w-4" />
+            </div>
+            <span>Contact Us</span>
+          </div>
+        </Button>
       </PopoverContent>
     </Popover>
   );

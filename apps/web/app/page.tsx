@@ -112,6 +112,12 @@ export default function HomePage() {
                 </p>
               </article>
             </div>
+            <div className="mt-12">
+              <h3 className="text-2xl font-semibold mb-6 text-center">Try Our Editor</h3>
+              <div className="w-full h-[600px] rounded-lg overflow-hidden border border-gray-200 shadow-lg">
+                <iframe src="/editor/embed" className="w-full h-full" />
+              </div>
+            </div>
           </div>
         </section>
 

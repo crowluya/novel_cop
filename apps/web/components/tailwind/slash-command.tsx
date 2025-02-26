@@ -18,12 +18,12 @@ import { uploadFn } from "./image-upload";
 
 export const suggestionItems = createSuggestionItems([
   {
-    title: "Send Feedback",
-    description: "Let us know how we can improve.",
+    title: "Contact Us",
+    description: "Get in touch with our team.",
     icon: <MessageSquarePlus size={18} />,
     command: ({ editor, range }) => {
       editor.chain().focus().deleteRange(range).run();
-      window.open("/feedback", "_blank");
+      window.location.href = "/#contact";
     },
   },
   {
