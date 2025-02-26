@@ -6,17 +6,17 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'NovelCop Editor - AI-Powered Writing Assistant',
-  description: 'Transform your writing with NovelCop\'s AI-powered editor. Get intelligent suggestions, real-time collaboration, and beautiful formatting.',
+  title: 'OpenSeek Editor - AI-Powered Writing Assistant',
+  description: 'Transform your writing with OpenSeek\'s AI-powered editor. Get intelligent suggestions, real-time collaboration, and beautiful formatting.',
   keywords: 'AI writing assistant, content editor, writing tool, text editor, collaboration tool',
   openGraph: {
-    title: 'NovelCop Editor - AI-Powered Writing Assistant',
+    title: 'OpenSeek Editor - AI-Powered Writing Assistant',
     description: 'Transform your writing with AI-powered assistance',
     images: ['/og-image.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NovelCop Editor - AI-Powered Writing Assistant',
+    title: 'OpenSeek Editor - AI-Powered Writing Assistant',
     description: 'Transform your writing with AI-powered assistance',
     images: ['/twitter-image.jpg'],
   },
