@@ -11,20 +11,7 @@ export const defaultEditorContent = {
       content: [
         {
           type: "text",
-          marks: [
-            {
-              type: "link",
-              attrs: {
-                href: "https://github.com/steven-tey/novel",
-                target: "_blank",
-              },
-            },
-          ],
-          text: "DeepSeek Editor",
-        },
-        {
-          type: "text",
-          text: " is a Notion-style WYSIWYG editor with AI-powered autocompletion. Built with ",
+          text: "DeepSeek Editor is a Notion-style WYSIWYG editor with AI-powered autocompletion. Built with ",
         },
         {
           type: "text",
@@ -64,7 +51,7 @@ export const defaultEditorContent = {
     {
       type: "codeBlock",
       attrs: { language: null },
-      content: [{ type: "text", text: "npm i novel" }],
+      content: [{ type: "text", text: "npm i openseek-editor" }],
     },
     {
       type: "heading",
@@ -77,7 +64,7 @@ export const defaultEditorContent = {
       content: [
         {
           type: "text",
-          text: 'import { Editor } from "novel";\n\nexport default function App() {\n  return (\n     <Editor />\n  )\n}',
+          text: 'import { Editor } from "openseek-editor";\n\nexport default function App() {\n  return (\n     <Editor />\n  )\n}',
         },
       ],
     },
