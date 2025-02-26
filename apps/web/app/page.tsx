@@ -61,9 +61,11 @@ export default function HomePage() {
               <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-10">
                 Powered by the latest DeepSeek R1 architecture, delivering powerful AI solutions
               </p>
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 h-14 text-lg">
-                Get Started
-              </Button>
+              <Link href="/editor">
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 h-14 text-lg">
+                  Get Started
+                </Button>
+              </Link>
             </div>
           </div>
         </section>

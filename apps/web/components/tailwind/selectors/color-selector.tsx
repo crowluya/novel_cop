@@ -118,7 +118,7 @@ export const ColorSelector = ({ open, onOpenChange }: ColorSelectorProps) => {
 
       <PopoverContent
         sideOffset={5}
-        className="my-1 flex max-h-80 w-48 flex-col overflow-hidden overflow-y-auto rounded border p-1 shadow-xl "
+        className="my-1 flex max-h-80 w-48 flex-col overflow-hidden overflow-y-auto rounded border p-1 shadow-xl bg-white"
         align="start"
       >
         <div className="flex flex-col">
@@ -144,10 +144,11 @@ export const ColorSelector = ({ open, onOpenChange }: ColorSelectorProps) => {
                 </div>
                 <span>{name}</span>
               </div>
+              {editor.isActive("textStyle", { color }) && <Check className="h-4 w-4" />}
             </EditorBubbleItem>
           ))}
         </div>
-        <div>
+        <div className="flex flex-col">
           <div className="my-1 px-2 text-sm font-semibold text-muted-foreground">Background</div>
           {HIGHLIGHT_COLORS.map(({ name, color }) => (
             <EditorBubbleItem

@@ -2,6 +2,11 @@
   @apply p-12 px-8 sm:px-12;
 }
 
+.ProseMirror p {
+  line-height: 1.75;
+  position: relative;
+}
+
 .ProseMirror .is-editor-empty:first-child::before {
   content: attr(data-placeholder);
   float: left;
@@ -209,4 +214,26 @@ span[style] > strong {
 
 mark[style] > strong {
   color: inherit;
+}
+
+/* 增强工具UI样式 */
+.EditorCommand {
+  background-color: white !important;
+  border: 1px solid #e5e7eb !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+  backdrop-filter: none !important;
+  opacity: 1 !important;
+}
+
+.EditorCommand .EditorCommandList {
+  background-color: white !important;
+}
+
+.EditorCommandItem {
+  background-color: transparent !important;
+}
+
+.EditorCommandItem:hover,
+.EditorCommandItem[aria-selected="true"] {
+  background-color: hsl(var(--accent)) !important;
 }
