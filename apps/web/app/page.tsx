@@ -2,6 +2,7 @@ import { Button } from "@/components/tailwind/ui/button";
 import { Brain, Bolt, Lock, Code, MessageSquare, Image } from "lucide-react";
 import Link from "next/link";
 import type { Metadata } from "next";
+import FloatingChatDemo from "./FloatingChatDemo";
 
 export const metadata: Metadata = {
   title: 'DeepSeek R1 - Advanced AI Solutions',
@@ -45,31 +46,10 @@ export default function HomePage() {
         </nav>
       </header>
 
-      <main className="pt-16">
-        {/* AI Chat Demo Section */}
-        <section className="py-12 relative overflow-hidden">
-          <div className="max-w-4xl mx-auto px-4">
-            <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-lg">
-              <div className="chat-container space-y-6">
-                <div className="chat-item">
-                  <div className="bg-gray-100 rounded-lg p-4 mb-4">
-                    <p className="typing-text">What can DeepSeek R1 do?</p>
-                  </div>
-                  <div className="bg-blue-50 rounded-lg p-4">
-                    <p className="mb-3">DeepSeek R1 is a state-of-the-art AI model that excels in:</p>
-                    <ul className="space-y-2 ml-4">
-                      <li>• Natural Language Processing</li>
-                      <li>• Code Generation & Analysis</li>
-                      <li>• Complex Problem Solving</li>
-                      <li>• Multi-modal Understanding</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+      {/* Floating AI Chat Demo */}
+      <FloatingChatDemo />
 
+      <main className="pt-16">
         {/* Hero Section */}
         <section className="py-24">
           <div className="max-w-6xl mx-auto px-4">
