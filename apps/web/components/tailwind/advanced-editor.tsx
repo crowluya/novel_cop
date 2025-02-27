@@ -23,6 +23,7 @@ import { MathSelector } from "./selectors/math-selector";
 import { NodeSelector } from "./selectors/node-selector";
 import { Separator } from "./ui/separator";
 import { Button } from "./ui/button";
+import { RefreshCcw } from "lucide-react";
 
 import GenerativeMenuSwitch from "./generative/generative-menu-switch";
 import { uploadFn } from "./image-upload";
@@ -75,6 +76,27 @@ const TailwindAdvancedEditor = () => {
   return (
     <div className="relative w-full max-w-screen-lg">
       <div className="flex absolute right-5 top-5 z-10 mb-5 gap-2">
+        <Button
+          variant="ghost"
+          size="sm"
+          className="rounded-lg bg-accent px-2 py-1 text-sm text-muted-foreground flex items-center gap-1"
+          onClick={() => {
+            setInitialContent(defaultEditorContent);
+            setSaveStatus("Saved");
+            setCharsCount(undefined);
+            window.localStorage.removeItem("novel-content");
+            window.localStorage.removeItem("html-content");
+            window.localStorage.removeItem("markdown");
+            
+            // 直接更新当前编辑器实例的内容
+            if (editorInstance) {
+              editorInstance.commands.setContent(defaultEditorContent);
+            }
+          }}
+        >
+          <RefreshCcw className="h-4 w-4" />
+          Reset
+        </Button>
         <div className="rounded-lg bg-accent px-2 py-1 text-sm text-muted-foreground">{saveStatus}</div>
         <div className={charsCount ? "rounded-lg bg-accent px-2 py-1 text-sm text-muted-foreground" : "hidden"}>
           {charsCount} Words

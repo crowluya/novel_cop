@@ -1,5 +1,6 @@
 import { Button } from "@/components/tailwind/ui/button";
 import { Brain, Bolt, Lock, Code, MessageSquare, Image } from "lucide-react";
+import { Logo } from "@/components/tailwind/ui/icons";
 import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
@@ -36,6 +37,7 @@ export default function HomePage() {
       <header className="fixed top-0 w-full bg-white/80 backdrop-blur-sm border-b z-50">
         <nav className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
+            <Logo className="w-6 h-6 text-blue-600" />
             <span className="text-xl font-bold text-gray-900">OpenSeek</span>
           </Link>
           <div className="flex items-center gap-6">
@@ -62,7 +64,7 @@ export default function HomePage() {
               <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-10">
                 Powered by the latest DeepSeek R1 architecture, delivering powerful AI solutions
               </p>
-              <Link href="/editor">
+              <Link href="/ai-editor">
                 <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 h-14 text-lg">
                   Get Started
                 </Button>
@@ -116,7 +118,7 @@ export default function HomePage() {
             <div className="mt-12">
               <h3 className="text-2xl font-semibold mb-6 text-center">Try Our Editor</h3>
               <div className="w-full h-[600px] rounded-lg overflow-hidden border border-gray-200 shadow-lg">
-                <iframe src="/editor/embed" className="w-full h-full" />
+                <iframe src="/ai-editor/embed" className="w-full h-full" />
               </div>
             </div>
           </div>
@@ -212,6 +214,7 @@ export default function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-2 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
+                <Logo className="w-5 h-5 text-blue-600" />
                 <span className="text-lg font-semibold text-gray-900">OpenSeek</span>
               </div>
               <p className="text-sm text-gray-500">

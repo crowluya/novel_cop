@@ -11,36 +11,8 @@ export const defaultEditorContent = {
       content: [
         {
           type: "text",
-          text: "DeepSeek Editor is a Notion-style WYSIWYG editor with AI-powered autocompletion. Built with ",
-        },
-        {
-          type: "text",
-          marks: [
-            {
-              type: "link",
-              attrs: {
-                href: "https://tiptap.dev/",
-                target: "_blank",
-              },
-            },
-          ],
-          text: "Tiptap",
-        },
-        { type: "text", text: " + " },
-        {
-          type: "text",
-          marks: [
-            {
-              type: "link",
-              attrs: {
-                href: "https://sdk.vercel.ai/docs",
-                target: "_blank",
-              },
-            },
-          ],
-          text: "Vercel AI SDK",
-        },
-        { type: "text", text: "." },
+          text: "DeepSeek Editor is a Notion-style editor with AI-powered autocompletion.",
+        }
       ],
     },
     {

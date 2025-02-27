@@ -13,6 +13,10 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
+  icons: {
+    icon: '/favicon.png',
+    apple: '/favicon.png',
+  },
   openGraph: {
     title,
     description,
