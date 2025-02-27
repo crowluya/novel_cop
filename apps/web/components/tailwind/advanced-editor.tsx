@@ -23,7 +23,7 @@ import { MathSelector } from "./selectors/math-selector";
 import { NodeSelector } from "./selectors/node-selector";
 import { Separator } from "./ui/separator";
 import { Button } from "./ui/button";
-import { RefreshCcw } from "lucide-react";
+import { RefreshCcw, Trash2 } from "lucide-react";
 
 import GenerativeMenuSwitch from "./generative/generative-menu-switch";
 import { uploadFn } from "./image-upload";
@@ -96,6 +96,29 @@ const TailwindAdvancedEditor = () => {
         >
           <RefreshCcw className="h-4 w-4" />
           Reset
+        </Button>
+        <Button
+          variant="ghost"
+          size="sm"
+          className="rounded-lg bg-accent px-2 py-1 text-sm text-muted-foreground flex items-center gap-1"
+          onClick={() => {
+            // 创建空内容
+            const emptyContent = { type: "doc", content: [{ type: "paragraph" }] };
+            setInitialContent(emptyContent);
+            setSaveStatus("Saved");
+            setCharsCount(undefined);
+            window.localStorage.removeItem("novel-content");
+            window.localStorage.removeItem("html-content");
+            window.localStorage.removeItem("markdown");
+            
+            // 直接更新当前编辑器实例的内容
+            if (editorInstance) {
+              editorInstance.commands.setContent(emptyContent);
+            }
+          }}
+        >
+          <Trash2 className="h-4 w-4" />
+          Clear
         </Button>
         <div className="rounded-lg bg-accent px-2 py-1 text-sm text-muted-foreground">{saveStatus}</div>
         <div className={charsCount ? "rounded-lg bg-accent px-2 py-1 text-sm text-muted-foreground" : "hidden"}>
