@@ -499,9 +499,11 @@ export default function HomePage() {
                   rows={4}
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
-                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
-                  Send Message
-                </Button>
+                <a href="mailto:contact@open-seek.com" className="block w-full">
+                  <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                    Send Message
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
