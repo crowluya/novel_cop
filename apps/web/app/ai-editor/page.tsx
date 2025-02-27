@@ -4,6 +4,7 @@ import Menu from "@/components/tailwind/ui/menu";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import type { Metadata } from "next";
+import Instructions from "@/components/tailwind/instructions";
 
 export const metadata: Metadata = {
   title: 'OpenSeek Editor - AI-Powered Writing Assistant',
@@ -35,6 +36,7 @@ export default function EditorPage() {
         <Menu />
       </div>
 
+      <Instructions />
       <TailwindAdvancedEditor />
     </div>
   );

@@ -57,10 +57,10 @@ export default function FloatingChatDemo() {
           <div className="chat-container space-y-4">
             <div className="chat-item">
               <div className="bg-gray-100 rounded-lg p-3 mb-3">
-                <p className="typing-text text-sm">What can DeepSeek R1 do?</p>
+                <p className="typing-text text-sm">What can DeepSeek V3/R1 do?</p>
               </div>
               <div className="bg-blue-50 rounded-lg p-3">
-                <p className="mb-2 text-sm">DeepSeek R1 is a state-of-the-art AI model that excels in:</p>
+                <p className="mb-2 text-sm">DeepSeek V3/R1 is a state-of-the-art AI model that excels in:</p>
                 <ul className="space-y-1 ml-2 text-sm">
                   <li>• Natural Language Processing</li>
                   <li>• Code Generation & Analysis</li>
@@ -74,4 +74,4 @@ export default function FloatingChatDemo() {
       )}
     </div>
   );
-} 
+}
