@@ -183,7 +183,7 @@ export default function HomePage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-lg text-gray-700 mb-6">
-                  OpenSeek is an advanced AI-powered writing assistant that transforms how you create, optimize, and manage content. Built on cutting-edge language models, it helps writers, marketers, academics, and businesses produce high-quality content efficiently.
+                  OpenSeek is an advanced AI-powered  assistant that transforms how you create, optimize, and manage content. Built on cutting-edge language models, it helps writers, marketers, academics, and businesses produce high-quality content efficiently.
                 </p>
                 <p className="text-lg text-gray-700">
                   Unlike basic text editors, OpenSeek understands context, offers creative suggestions, and adapts to your writing style while ensuring grammatical accuracy and engaging prose across multiple languages.
