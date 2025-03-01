@@ -218,6 +218,16 @@ export default function HomePage() {
         <section className="py-24 bg-gradient-to-b from-white to-blue-50" id="how-to-use">
           <div className="max-w-6xl mx-auto px-4">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-16 text-center">How to Use OpenSeek</h2>
+            
+            {/* Added GIF image */}
+            <div className="mb-12 text-center">
+              <img 
+                src="https://pub-120195864a0046c49ac9d9af4171257f.r2.dev/openseek.gif" 
+                alt="How to use OpenSeek" 
+                className="mx-auto rounded-lg shadow-lg max-w-full"
+              />
+            </div>
+            
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white p-8 rounded-xl shadow-md">
                 <div className="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center mb-6 text-white font-bold text-xl">1</div>
