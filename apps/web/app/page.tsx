@@ -7,7 +7,7 @@ import Script from "next/script";
 import FloatingChatDemo from "./FloatingChatDemo";
 
 export const metadata: Metadata = {
-  title: '',
+  title: "DeepSeek - Advanced AI Solutions",
   description: 'Explore infinite AI possibilities with DeepSeek V3/R1, delivering powerful AI solutions for natural language processing, code generation, and complex problem solving.',
   keywords: 'DeepSeek , AI solutions, natural language processing, code generation, AI model',
   openGraph: {
