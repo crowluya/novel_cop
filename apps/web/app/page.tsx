@@ -520,25 +520,50 @@ export default function HomePage() {
         </section>
       </main>
 
-      <footer className="bg-white border-t py-12">
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-16">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <Logo className="w-5 h-5 text-blue-600" />
-                <span className="text-lg font-semibold text-gray-900">OpenSeek</span>
+              <div className="flex items-center space-x-2 mb-6">
+                <Logo className="w-8 h-8 text-blue-400" />
+                <span className="text-2xl font-bold">OpenSeek</span>
               </div>
-              <p className="text-sm text-gray-500">
-                Explore Infinite AI Possibilities
+              <p className="text-gray-400 mb-6">
+                Explore infinite AI possibilities with the latest DeepSeek technology.
               </p>
             </div>
-            <div className="text-right">
-              <h4 className="font-semibold text-gray-900 mb-3">Contact</h4>
-              <p className="text-sm text-gray-500">Email: contact@open-seek.com</p>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-6">Company</h3>
+              <ul className="space-y-4">
+                <li><a href="#about" className="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                <li><a href="#blog" className="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+                <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-6">Product</h3>
+              <ul className="space-y-4">
+                <li><a href="#use-cases" className="text-gray-400 hover:text-white transition-colors">Use Cases</a></li>
+                <li><a href="#faq" className="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-6">Legal</h3>
+              <ul className="space-y-4">
+                <li><a href="#privacy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                <li><a href="#terms" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+              </ul>
             </div>
           </div>
-          <div className="mt-8 pt-8 border-t text-center text-sm text-gray-500">
-            {new Date().getFullYear()} OpenSeek. All rights reserved.
+
+          <div className="border-t border-gray-800 mt-12 pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center">
+              <p className="text-gray-400">&copy; {new Date().getFullYear()} OpenSeek. All rights reserved.</p>
+            </div>
           </div>
         </div>
       </footer>
