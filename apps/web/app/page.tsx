@@ -7,17 +7,17 @@ import Script from "next/script";
 import FloatingChatDemo from "./FloatingChatDemo";
 
 export const metadata: Metadata = {
-  title: 'DeepSeek V3/R1 - Advanced AI Solutions',
+  title: '',
   description: 'Explore infinite AI possibilities with DeepSeek V3/R1, delivering powerful AI solutions for natural language processing, code generation, and complex problem solving.',
-  keywords: 'DeepSeek V3/R1, AI solutions, natural language processing, code generation, AI model',
+  keywords: 'DeepSeek , AI solutions, natural language processing, code generation, AI model',
   openGraph: {
-    title: 'DeepSeek V3/R1 - Advanced AI Solutions',
+    title: 'DeepSeek  - Advanced AI Solutions',
     description: 'Explore infinite AI possibilities with DeepSeek V3/R1',
     images: ['/og-image.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'DeepSeek V3/R1 - Advanced AI Solutions',
+    title: 'DeepSeek - Advanced AI Solutions',
     description: 'Explore infinite AI possibilities with DeepSeek V3/R1',
     images: ['/twitter-image.jpg'],
   },

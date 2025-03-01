@@ -6,7 +6,7 @@ import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import Providers from "./providers";
 
-const title = "DeepSeek V3/R1 - Advanced AI Solutions";
+const title = "DeepSeek - Advanced AI Solutions";
 const description =
   "Explore infinite AI possibilities with DeepSeek V3/R1, delivering powerful AI solutions for natural language processing, code generation, and complex problem solving.";
 
