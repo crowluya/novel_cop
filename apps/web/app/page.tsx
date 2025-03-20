@@ -7,18 +7,18 @@ import Script from "next/script";
 import FloatingChatDemo from "./FloatingChatDemo";
 
 export const metadata: Metadata = {
-  title: "DeepSeek - Advanced AI Solutions",
-  description: 'Explore infinite AI possibilities with DeepSeek V3/R1, delivering powerful AI solutions for natural language processing, code generation, and complex problem solving.',
-  keywords: 'DeepSeek , AI solutions, natural language processing, code generation, AI model',
+  title: "Open-Seek - Advanced AI Solutions",
+  description: 'Explore infinite AI possibilities with Open-Seek V3/R1, delivering powerful AI solutions for natural language processing, code generation, and complex problem solving.',
+  keywords: 'Open-Seek , AI solutions, natural language processing, code generation, AI model',
   openGraph: {
-    title: 'DeepSeek  - Advanced AI Solutions',
-    description: 'Explore infinite AI possibilities with DeepSeek V3/R1',
+    title: 'Open-Seek  - Advanced AI Solutions',
+    description: 'Explore infinite AI possibilities with Open-Seek V3/R1',
     images: ['/og-image.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'DeepSeek - Advanced AI Solutions',
-    description: 'Explore infinite AI possibilities with DeepSeek V3/R1',
+    title: 'Open-Seek - Advanced AI Solutions',
+    description: 'Explore infinite AI possibilities with Open-Seek V3/R1',
     images: ['/twitter-image.jpg'],
   },
 };
@@ -38,7 +38,7 @@ export default function HomePage() {
         <nav className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
             <Logo className="w-6 h-6 text-blue-600" />
-            <span className="text-xl font-bold text-gray-900">OpenSeek</span>
+            <span className="text-xl font-bold text-gray-900">Open-Seek</span>
           </Link>
           <div className="flex items-center gap-4">
             <Link href="#what-is" className="text-gray-600 hover:text-gray-900">What is</Link>
@@ -46,6 +46,9 @@ export default function HomePage() {
             <Link href="#detailed-features" className="text-gray-600 hover:text-gray-900">Features</Link>
             <Link href="#use-cases" className="text-gray-600 hover:text-gray-900">Use cases</Link>
             <Link href="#faq" className="text-gray-600 hover:text-gray-900">FAQ</Link>
+            <Link href="/blog" className="text-gray-600 hover:text-gray-900">Blog</Link>
+            <Link href="/privacy-policy" className="text-gray-600 hover:text-gray-900">Privacy</Link>
+            <Link href="/terms-of-service" className="text-gray-600 hover:text-gray-900">Terms</Link>
             <Link href="#about" className="text-gray-600 hover:text-gray-900">About</Link>
             <Link href="#contact" className="text-gray-600 hover:text-gray-900">Contact</Link>
           </div>
@@ -65,7 +68,7 @@ export default function HomePage() {
                 <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> AI Possibilities</span>
               </h1>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-10">
-                Powered by the latest DeepSeek V3/R1 architecture, delivering powerful AI solutions
+                Powered by the latest Open-Seek V3/R1 architecture, delivering powerful AI solutions
               </p>
               <Link href="/ai-editor">
                 <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 h-14 text-lg">
@@ -179,14 +182,14 @@ export default function HomePage() {
         {/* What is OpenSeek Section */}
         <section className="py-24 bg-white" id="what-is">
           <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-16 text-center">What is OpenSeek?</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-16 text-center">What is Open-Seek?</h2>
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-lg text-gray-700 mb-6">
-                  OpenSeek is an advanced AI-powered  assistant that transforms how you create, optimize, and manage content. Built on cutting-edge language models, it helps writers, marketers, academics, and businesses produce high-quality content efficiently.
+                  Open-Seek is an advanced AI-powered  assistant that transforms how you create, optimize, and manage content. Built on cutting-edge language models, it helps writers, marketers, academics, and businesses produce high-quality content efficiently.
                 </p>
                 <p className="text-lg text-gray-700">
-                  Unlike basic text editors, OpenSeek understands context, offers creative suggestions, and adapts to your writing style while ensuring grammatical accuracy and engaging prose across multiple languages.
+                  Unlike basic text editors, Open-Seek understands context, offers creative suggestions, and adapts to your writing style while ensuring grammatical accuracy and engaging prose across multiple languages.
                 </p>
               </div>
               <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-xl border border-blue-100 shadow-sm">
@@ -217,13 +220,13 @@ export default function HomePage() {
         {/* How to Use OpenSeek Section */}
         <section className="py-24 bg-gradient-to-b from-white to-blue-50" id="how-to-use">
           <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-16 text-center">How to Use OpenSeek</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-16 text-center">How to Use Open-Seek</h2>
             
             {/* Added GIF image */}
             <div className="mb-12 text-center">
               <img 
                 src="https://pub-120195864a0046c49ac9d9af4171257f.r2.dev/openseek.gif" 
-                alt="How to use OpenSeek" 
+                alt="How to use Open-Seek" 
                 className="mx-auto rounded-lg shadow-lg max-w-full"
               />
             </div>
@@ -240,7 +243,7 @@ export default function HomePage() {
                 <div className="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center mb-6 text-white font-bold text-xl">2</div>
                 <h3 className="text-xl font-semibold mb-4">Provide Basic Input</h3>
                 <p className="text-gray-600">
-                  Enter your topic, target audience, key points, and preferred tone. OpenSeek will generate a draft based on your specifications.
+                  Enter your topic, target audience, key points, and preferred tone. Open-Seek will generate a draft based on your specifications.
                 </p>
               </div>
               <div className="bg-white p-8 rounded-xl shadow-md">
@@ -254,7 +257,7 @@ export default function HomePage() {
             <div className="mt-12 text-center">
               <Link href="/ai-editor">
                 <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3">
-                  Try OpenSeek Editor Now
+                  Try Open-Seek Editor Now
                 </Button>
               </Link>
             </div>
@@ -264,7 +267,7 @@ export default function HomePage() {
         {/* Features of OpenSeek Section */}
         <section className="py-24 bg-white" id="detailed-features">
           <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-16 text-center">Features of OpenSeek</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-16 text-center">Features of Open-Seek</h2>
             <div className="grid md:grid-cols-2 gap-x-12 gap-y-16">
               <div className="flex gap-4">
                 <div className="flex-shrink-0">
@@ -351,7 +354,7 @@ export default function HomePage() {
         {/* Use Cases Section */}
         <section className="py-24 bg-gradient-to-b from-white to-blue-50" id="use-cases">
           <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-16 text-center">Use Cases of OpenSeek</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-16 text-center">Use Cases of Open-Seek</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-white p-8 rounded-xl shadow-md">
                 <h3 className="text-xl font-semibold mb-4 text-blue-600">Marketing Teams</h3>
@@ -443,37 +446,37 @@ export default function HomePage() {
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-16 text-center">Frequently Asked Questions</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-xl border border-blue-100 shadow-sm">
-                <h3 className="text-xl font-semibold mb-4">What powers OpenSeek's AI capabilities?</h3>
+                <h3 className="text-xl font-semibold mb-4">What powers Open-Seek's AI capabilities?</h3>
                 <p className="text-gray-700">
-                  OpenSeek is powered by cutting-edge AI models including DeepSeek V3 and DeepSeek R1, providing state-of-the-art natural language processing and content generation capabilities.
+                  Open-Seek is powered by cutting-edge AI models including Open-Seek V3 and Open-Seek R1, providing state-of-the-art natural language processing and content generation capabilities.
                 </p>
               </div>
               <div className="bg-gradient-to-br from-purple-50 to-white p-8 rounded-xl border border-purple-100 shadow-sm">
                 <h3 className="text-xl font-semibold mb-4">Who owns the copyright to generated content?</h3>
                 <p className="text-gray-700">
-                  You do! Every article generated through your OpenSeek account is copyrighted to you, giving you complete ownership and control over the content.
+                  You do! Every article generated through your Open-Seek account is copyrighted to you, giving you complete ownership and control over the content.
                 </p>
               </div>
               <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-xl border border-blue-100 shadow-sm">
-                <h3 className="text-xl font-semibold mb-4">Is OpenSeek suitable for non-writers?</h3>
+                <h3 className="text-xl font-semibold mb-4">Is Open-Seek suitable for non-writers?</h3>
                 <p className="text-gray-700">
-                  Absolutely! OpenSeek is designed for everyone from professional writers to business users with no writing experience. The intuitive interface and AI assistance make quality content creation accessible to all skill levels.
+                  Absolutely! Open-Seek is designed for everyone from professional writers to business users with no writing experience. The intuitive interface and AI assistance make quality content creation accessible to all skill levels.
                 </p>
               </div>
               <div className="bg-gradient-to-br from-purple-50 to-white p-8 rounded-xl border border-purple-100 shadow-sm">
-                <h3 className="text-xl font-semibold mb-4">How does OpenSeek handle specialized industry content?</h3>
+                <h3 className="text-xl font-semibold mb-4">How does Open-Seek handle specialized industry content?</h3>
                 <p className="text-gray-700">
-                  OpenSeek has been trained on diverse content across industries including technology, healthcare, finance, education, and more. It can adapt to specialized terminology and conventions while maintaining accuracy.
+                  Open-Seek has been trained on diverse content across industries including technology, healthcare, finance, education, and more. It can adapt to specialized terminology and conventions while maintaining accuracy.
                 </p>
               </div>
               <div className="bg-gradient-to-br from-green-50 to-white p-8 rounded-xl border border-green-100 shadow-sm">
-                <h3 className="text-xl font-semibold mb-4">Can I customize OpenSeek's output style?</h3>
+                <h3 className="text-xl font-semibold mb-4">Can I customize Open-Seek's output style?</h3>
                 <p className="text-gray-700">
-                  Yes! OpenSeek allows you to define your preferred tone, style, and formatting preferences. The more you use it, the better it learns your unique writing style and brand voice.
+                  Yes! Open-Seek allows you to define your preferred tone, style, and formatting preferences. The more you use it, the better it learns your unique writing style and brand voice.
                 </p>
               </div>
               <div className="bg-gradient-to-br from-pink-50 to-white p-8 rounded-xl border border-pink-100 shadow-sm">
-                <h3 className="text-xl font-semibold mb-4">How secure is my content with OpenSeek?</h3>
+                <h3 className="text-xl font-semibold mb-4">How secure is my content with Open-Seek?</h3>
                 <p className="text-gray-700">
                   We prioritize data security and privacy. Your content is encrypted, never shared with third parties, and you retain full ownership of all materials created using our platform.
                 </p>
@@ -527,10 +530,10 @@ export default function HomePage() {
             <div>
               <div className="flex items-center space-x-2 mb-6">
                 <Logo className="w-8 h-8 text-blue-400" />
-                <span className="text-2xl font-bold">OpenSeek</span>
+                <span className="text-2xl font-bold">Open-Seek</span>
               </div>
               <p className="text-gray-400 mb-6">
-                Explore infinite AI possibilities with the latest DeepSeek technology.
+                Explore infinite AI possibilities with the latest Open-Seek technology.
               </p>
             </div>
 
@@ -562,7 +565,7 @@ export default function HomePage() {
 
           <div className="border-t border-gray-800 mt-12 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
-              <p className="text-gray-400">&copy; {new Date().getFullYear()} OpenSeek. All rights reserved.</p>
+              <p className="text-gray-400">&copy; {new Date().getFullYear()} Open-Seek. All rights reserved.</p>
             </div>
           </div>
         </div>
