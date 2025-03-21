@@ -8,5 +8,6 @@
       "source": "/docs/:match*",
       "destination": "https://novel.mintlify.dev/docs/:match*"
     }
-  ]
+  ],
+  "buildCommand": "cd ../.. && pnpm build --filter=novel && pnpm build --filter=novel-next-app"
 }
