@@ -30,6 +30,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <meta name="google-adsense-account" content="ca-pub-2809409847251476" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2809409847251476"
+          crossOrigin="anonymous"></script>
+      </head>
       <body>
         <Providers>{children}</Providers>
       </body>
