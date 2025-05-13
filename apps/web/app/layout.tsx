@@ -1,8 +1,8 @@
 import "./globals.css";
 import "@/styles/prosemirror.css";
-import 'katex/dist/katex.min.css';
+import "katex/dist/katex.min.css";
 
-import type { Metadata, Viewport } from "next";
+import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Providers from "./providers";
 
@@ -14,8 +14,8 @@ export const metadata: Metadata = {
   title,
   description,
   icons: {
-    icon: '/favicon.png',
-    apple: '/favicon.png',
+    icon: "/favicon.png",
+    apple: "/favicon.png",
   },
   openGraph: {
     title,
@@ -31,9 +31,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <meta name="google-adsense-account" content="ca-pub-2809409847251476" />
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2809409847251476"
-          crossOrigin="anonymous"></script>
+        <meta name="google-adsense-account" content="ca-pub-9570640990964396" />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9570640990964396"
+          crossOrigin="anonymous"
+        />
       </head>
       <body>
         <Providers>{children}</Providers>
