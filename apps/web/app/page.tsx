@@ -3,6 +3,7 @@ import { Logo } from "@/components/tailwind/ui/icons";
 import { Bolt, Brain, Code, Image, Lock, MessageSquare } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import FloatingChatDemo from "./FloatingChatDemo";
 
 export const metadata: Metadata = {
@@ -569,6 +570,24 @@ export default function HomePage() {
           </div>
         </section>
       </main>
+
+      {/* Google Analytics */}
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-LBXKXLCKR7" />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-LBXKXLCKR7');
+        `}
+      </Script>
+
+      {/* Plausible Analytics */}
+      <Script
+        defer
+        data-domain="open-seek.com"
+        src="https://bibleversegenerator.net/js/script.outbound-links.pageview-props.revenue.tagged-events.js"
+      />
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-16">
